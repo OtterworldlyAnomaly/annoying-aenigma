@@ -29,14 +29,14 @@ rand = list(range(0, 10)) # list of integers from 0 to 9
 random.shuffle(rand)
 count = 0
 
-def q_and_a():
+def q_and_a(): # function for questioning and answering
     global count
     if(count<=9):
-        messagebox.showinfo("Answer",answers[rand[count]])
+        messagebox.showinfo("Answer",answers[rand[count]]) # opens dialogue with answers array indexed by random number list
         count = count + 1
     else: 
         count = 0
-    label.config(text=questions[rand[count]])
+    label.config(text=questions[rand[count]]) # updates the displayed question with the next random number
 
 # Create the main application window
 root = tk.Tk()
