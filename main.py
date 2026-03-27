@@ -22,7 +22,7 @@ root.title("Simple Python GUI")
 root.geometry("300x120")  # Width x Height
 
 # Create and place a label
-label = tk.Label(root, text=questions[rand[count]], font=("Arial", 12))
+label = tk.Label(root, text=q_and_a[rand[count]], font=("Arial", 12))
 label.pack(pady=5)
 
 # Create and place a button
