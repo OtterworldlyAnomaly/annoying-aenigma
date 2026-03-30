@@ -8,13 +8,14 @@ import toml
 q_and_a = dict()
 # Dictionaries for questions and answers
 
-rand = list(range(0, q_and_a.items())) # list of integers from 0 to 9
+rand = list(range(0,len(q_and_a.items()))) # list of integers from 0 to 9
 random.shuffle(rand)
 count = 0
 # random number generator to shuffle q and a
 
 def add_to_qna():
-    question = input("Enter a question"); answer = input("Enter the answer") # 
+    question = input("Enter a question"); answer = input("Enter the answer")
+    q_and_a[question] = answer
 
 # Create the main application window
 root = tk.Tk()
@@ -22,7 +23,7 @@ root.title("Simple Python GUI")
 root.geometry("300x120")  # Width x Height
 
 # Create and place a label
-label = tk.Label(root, text=q_and_a[rand[count]], font=("Arial", 12))
+label = tk.Label(root, text="test", font=("Arial", 12))
 label.pack(pady=5)
 
 # Create and place a button
